@@ -28,7 +28,13 @@ export YOURID="-10001291898109"
 export GROUPSNAME="MEU GRUPO"
 ```
 
-Or just configure the `tools.py`
+Or just configure the `tools.py`, to obtain a key and ID to use this project, you must follow these steps:
+- Log in to your Telegram account with the phone number of the developer account to be used.
+- Click on API Development Tools.
+- A Create new application window will be displayed. Fill in your registration details. It is not necessary to enter any URL and only the first two fields (application title and short name) can be changed at this time.
+- Click on Create application at the end. Remember that your API hash is secret and Telegram cannot revoke it. Don't post anywhere!
+
+:warning: Note: This ID and the API hash are used by the application, not the phone number. You can use this API ID and hash with any phone number or even for bot accounts
 
 ## Boot process
 
