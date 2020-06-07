@@ -14,9 +14,14 @@ def bash_(self):
 		logging.warning(error)
 		return error
 
+def isadmin(self):
+	if (self.admin_rights): return True
+	elif (self.creator): return True
+	else: return False
+	
 async def delt(even, item, sleep_):
 	await sleep(sleep_)
 	if (even): await even.delete()
 	if (item): await item.delete()
 
-__all__ = ['client', 'delt', 'sudo_id', 'sleep']
+__all__ = ['client', 'delt', 'sudo_id', 'sleep', 'isadmin']
