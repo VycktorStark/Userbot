@@ -7,8 +7,8 @@ muted_rights = ChatBannedRights(until_date=None,view_messages=None,send_messages
 unmuted_rights = ChatBannedRights(until_date=None,view_messages=None,send_messages=False)
 async def Function(cmd, event, delt, LANG):
 	reply = await event.get_reply_message()
-	chat = await event.get_chat()
-	if isadmin(chat) == True:
+	result = await client(GetParticipantRequest(event.chat_id, event.message.from_id))
+	if isadmin(result) == True:
 		if (cmd[0].lower() == "mute"):
 			if not (reply):
 				if len(cmd) == 2:
