@@ -51,7 +51,7 @@ async def info(event):
 									await aPlugin['function'](cmd, event, delt, LANG)
 						except Exception as error:
 							print(error)
-
+					break
 if __name__ == "__main__":
 	client.start()
 	client.run_until_disconnected()
