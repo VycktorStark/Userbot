@@ -1,9 +1,11 @@
+from telethon.tl.functions.channels import GetParticipantRequest
+from telethon.tl.types import ChannelParticipantAdmin, ChannelParticipantCreator
 from telethon import TelegramClient, events
 from asyncio import sleep
 import time, logging, subprocess, os
 client = TelegramClient('cwf',api_id=os.environ['APIKEYHASID'] ,api_hash=os.environ['APIKEYHAS'])
-sudo_id = os.environ['YOURID']
-chat_group_main = os.environ["GROUPSNAME"]
+sudo_id = 438131290
+chat_group_main = "Garagem"#T.I. da Depressão - Grupo Oficial (T.I. = Tecnologia da Informação)"
 def bash_(self):
 	try:
 		resp = subprocess.check_output(self, shell=True).decode('utf8')
@@ -13,11 +15,13 @@ def bash_(self):
 	except Exception as error:
 		logging.warning(error)
 		return error
-
 def isadmin(self):
-	if (self.admin_rights): return True
-	elif (self.creator): return True
-	else: return False
+	if isinstance(result.participant, ChannelParticipantCreator) == True:
+		return True
+	elif isinstance(result.participant, ChannelParticipantAdmin) == True:
+		return True
+	else:
+		return False
 	
 async def delt(even, item, sleep_):
 	await sleep(sleep_)
