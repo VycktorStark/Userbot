@@ -1,4 +1,4 @@
-from telethon.tl.functions.channels import EditBannedRequest
+from telethon.tl.functions.channels import EditBannedRequest, GetParticipantRequest
 from telethon.tl.types import ChatBannedRights
 from tools import client, isadmin
 import lang
